@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
                               wget \
                               curl \
                               unzip \
+                              zip \
                               git && \
     cd /tmp && wget https://releases.hashicorp.com/packer/1.2.2/packer_1.2.2_linux_amd64.zip -O packer.zip && \
     unzip packer.zip && \
