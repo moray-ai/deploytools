@@ -18,3 +18,4 @@ RUN pip install \
         boto3==1.6.6
 
 RUN git clone -b merge https://github.com/tonylampada/dockerutils.git ~/dockerutils
+COPY bin/* /usr/bin/
