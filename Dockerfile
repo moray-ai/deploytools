@@ -1,7 +1,6 @@
-FROM ubuntu:16.04
+FROM python:3.8
 
 RUN apt-get update && apt-get install -y \
-                              python-pip \
                               wget \
                               curl \
                               unzip \
@@ -13,9 +12,8 @@ RUN apt-get update && apt-get install -y \
     rm packer*
 
 RUN pip install \
-        ansible==2.5.0 \
-        awscli==1.14.53 \
-        boto3==1.6.6
+        ansible==2.9.9 \
+        awscli==1.18.35 \
+        boto3==1.14.52
 
-RUN git clone -b merge https://github.com/tonylampada/dockerutils.git ~/dockerutils
 COPY bin/* /usr/bin/
