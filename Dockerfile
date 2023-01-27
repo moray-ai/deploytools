@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.10
 
 RUN apt-get update && apt-get install -y \
                               wget \
@@ -12,8 +12,6 @@ RUN apt-get update && apt-get install -y \
     rm packer*
 
 RUN pip install \
-        ansible==2.9.9 \
-        awscli==1.18.35 \
-        boto3==1.12.35
-
-COPY bin/* /usr/bin/
+        ansible==7.1.0 \
+        awscli==1.27.37 \
+        boto3==1.26.35
