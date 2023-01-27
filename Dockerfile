@@ -14,6 +14,6 @@ RUN apt-get update && apt-get install -y \
 RUN pip install \
         ansible==2.9.9 \
         awscli==1.18.35 \
-        boto3==1.14.52
+        boto3==1.12.35
 
 COPY bin/* /usr/bin/
